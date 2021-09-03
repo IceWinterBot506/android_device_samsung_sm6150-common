@@ -22,6 +22,19 @@ COMMON_PATH := device/samsung/sm6150-common
 
 PRODUCT_TARGET_VNDK_VERSION := 29
 
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files
+
+# IPC router config
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
+    $(COMMON_PATH)/configs/sec_config_oem:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config_oem
+
+# IRQ
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
@@ -34,6 +47,15 @@ DEVICE_PACKAGE_OVERLAYS += \
  
 # OTA Updater
 AB_OTA_UPDATER := false
+
+# Public Libraries
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# QCOM
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    $(COMMON_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 # Recovery
 PRODUCT_PACKAGES += \
