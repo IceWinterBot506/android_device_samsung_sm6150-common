@@ -45,5 +45,9 @@ TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
+# Camera
+USE_DEVICE_SPECIFIC_CAMERA := true
+USE_CAMERA_STUB := false
+
 # Inherit the proprietary files
 include vendor/samsung/sm6150-common/BoardConfigVendor.mk
