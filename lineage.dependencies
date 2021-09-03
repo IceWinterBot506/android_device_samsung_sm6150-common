@@ -4,6 +4,10 @@
     "target_path": "device/samsung/qcom-common"
   },
   {
+    "repository": "android_device_samsung_slsi_sepolicy",
+    "target_path": "device/samsung_slsi/sepolicy"
+  },
+  {
     "repository": "android_device_samsung_sm6150",
     "target_path": "kernel/samsung/sm6150"
   }
