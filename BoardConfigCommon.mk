@@ -49,5 +49,8 @@ TARGET_USES_UEFI := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 USE_CAMERA_STUB := false
 
+# Charger
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 # Inherit the proprietary files
 include vendor/samsung/sm6150-common/BoardConfigVendor.mk
