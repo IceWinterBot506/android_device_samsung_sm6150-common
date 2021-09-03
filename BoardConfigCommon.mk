@@ -40,5 +40,10 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := sm6150
+TARGET_NO_BOOTLOADER := true
+TARGET_USES_UEFI := true
+
 # Inherit the proprietary files
 include vendor/samsung/sm6150-common/BoardConfigVendor.mk
