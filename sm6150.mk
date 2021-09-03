@@ -31,6 +31,13 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/samsung/qcom-common/overlay \
+ 
+# OTA Updater
+AB_OTA_UPDATER := false
+
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6150-common/sm6150-common-vendor.mk)
