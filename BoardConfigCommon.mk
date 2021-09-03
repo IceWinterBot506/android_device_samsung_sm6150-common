@@ -64,5 +64,9 @@ endif
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
+# Graphics
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+TARGET_USES_HWC2 := true
+
 # Inherit the proprietary files
 include vendor/samsung/sm6150-common/BoardConfigVendor.mk
