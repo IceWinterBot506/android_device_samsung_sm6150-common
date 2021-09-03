@@ -20,5 +20,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 COMMON_PATH := device/samsung/sm6150-common
 
+PRODUCT_TARGET_VNDK_VERSION := 29
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung \
+    libkeymaster4support.vendor:64 \
+    libkeymaster4_1support.vendor:64
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    device/samsung/qcom-common/overlay \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6150-common/sm6150-common-vendor.mk)
