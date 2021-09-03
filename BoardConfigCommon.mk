@@ -60,5 +60,9 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# GPS
+TARGET_NO_RPC := true
+USE_DEVICE_SPECIFIC_GPS := true
+
 # Inherit the proprietary files
 include vendor/samsung/sm6150-common/BoardConfigVendor.mk
