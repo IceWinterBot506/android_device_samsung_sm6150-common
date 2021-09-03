@@ -37,5 +37,8 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
+
 # Inherit the proprietary files
 include vendor/samsung/sm6150-common/BoardConfigVendor.mk
