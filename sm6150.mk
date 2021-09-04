@@ -48,9 +48,12 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/samsung/qcom-common/overlay \
-    $(COMMON_PATH)/overlay
+    $(COMMON_PATH)/overlay \
+    $(COMMON_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(COMMON_PATH)/overlay-lineage/lineage-sdk
  
 # OTA Updater
 AB_OTA_UPDATER := false
