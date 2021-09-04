@@ -26,6 +26,10 @@ PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
 # Input
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
@@ -53,7 +57,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(COMMON_PATH)/overlay-lineage/lineage-sdk
+    $(COMMON_PATH)/overlay-lineage/lineage-sdk \
+    $(COMMON_PATH)/overlay-lineage/packages/apps/Snap
  
 # OTA Updater
 AB_OTA_UPDATER := false
