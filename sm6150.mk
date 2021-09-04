@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Default is nosdcard, S/W button enabled in resource
+PRODUCT_CHARACTERISTICS := nosdcard
+
 COMMON_PATH := device/samsung/sm6150-common
 
 PRODUCT_TARGET_VNDK_VERSION := 29
