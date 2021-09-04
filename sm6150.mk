@@ -18,6 +18,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 COMMON_PATH := device/samsung/sm6150-common
 
 PRODUCT_TARGET_VNDK_VERSION := 29
